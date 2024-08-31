@@ -1,8 +1,7 @@
 name: blockplanner
 description: "A new Flutter project."
 
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
-
+publish_to: 'none' 
 version: 1.0.0+1
 
 environment:
@@ -13,14 +12,16 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.6
-  google_fonts: ^6.2.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
   flutter_lints: ^4.0.0
+  google_fonts: ^6.2.1
 
 flutter:
+  assets:
+    - assets/images/icon.png
+    - assets/images/googleLogo.png
   uses-material-design: true
-
-  #assets:
