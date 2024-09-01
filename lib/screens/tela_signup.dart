@@ -18,7 +18,7 @@ class SignUpPage extends StatelessWidget {
               alignment: Alignment.center,
             ),
             elevation: 0,
-            backgroundColor: Color.fromARGB(200, 92, 163, 95),
+            backgroundColor: const Color.fromARGB(200, 92, 163, 95),
           )),
       body: Container(
         width: MediaQuery.of(context).size.width,
@@ -48,7 +48,7 @@ class SignUpPage extends StatelessWidget {
                   fontWeight: FontWeight.w800,
                   shadows: [
                     Shadow(
-                      offset: Offset(2.0, 2.0),
+                      offset: const Offset(2.0, 2.0),
                       blurRadius: 3.0,
                       color: Colors.green.withOpacity(0.6),
                     ),
@@ -63,34 +63,8 @@ class SignUpPage extends StatelessWidget {
             const SizedBox(height: 15),
             const CupertinoTextField(
               cursorColor: Colors.green,
-              padding: EdgeInsets.all(16),
-              placeholder: "Nome de usuário",
-              placeholderStyle: TextStyle(color: Colors.black38, fontSize: 15),
-              style: TextStyle(color: Colors.black, fontSize: 15),
-              decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 235, 243, 238),
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(15),
-                  )),
-            ),
-            const SizedBox(height: 8),
-            const CupertinoTextField(
-              cursorColor: Colors.green,
-              padding: EdgeInsets.all(16),
-              placeholder: "Endereço de e-mail",
-              placeholderStyle: TextStyle(color: Colors.black38, fontSize: 15),
-              style: TextStyle(color: Colors.black, fontSize: 15),
-              decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 235, 243, 238),
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(15),
-                  )),
-            ),
-            const SizedBox(height: 8),
-            const CupertinoTextField(
-              cursorColor: Colors.green,
               padding: EdgeInsets.all(15),
-              placeholder: "Crie uma senha",
+              placeholder: "Endereço de e-mail",
               placeholderStyle: TextStyle(color: Colors.black38, fontSize: 15),
               style: TextStyle(color: Colors.black, fontSize: 15),
               decoration: BoxDecoration(
