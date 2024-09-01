@@ -15,6 +15,7 @@ class SignUpPage extends StatelessWidget {
             title: const Image(
               image: AssetImage("assets/images/icon.png"),
               width: 240,
+              alignment: Alignment.center,
             ),
             elevation: 0,
             backgroundColor: Color.fromARGB(200, 92, 163, 95),
@@ -36,7 +37,7 @@ class SignUpPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const SizedBox(
-              height: 40,
+              height: 70,
             ),
             Title(
               color: Colors.black,
@@ -59,7 +60,20 @@ class SignUpPage extends StatelessWidget {
               "Preencha os campos abaixo.",
               style: TextStyle(color: Colors.black, fontSize: 16),
             ),
-            const SizedBox(height: 30),
+            const SizedBox(height: 15),
+            const CupertinoTextField(
+              cursorColor: Colors.green,
+              padding: EdgeInsets.all(16),
+              placeholder: "Nome de usuário",
+              placeholderStyle: TextStyle(color: Colors.black38, fontSize: 15),
+              style: TextStyle(color: Colors.black, fontSize: 15),
+              decoration: BoxDecoration(
+                  color: Color.fromARGB(255, 235, 243, 238),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(15),
+                  )),
+            ),
+            const SizedBox(height: 8),
             const CupertinoTextField(
               cursorColor: Colors.green,
               padding: EdgeInsets.all(16),
@@ -175,8 +189,8 @@ class SignUpPage extends StatelessWidget {
                 "Já possui uma conta?",
                 style: TextStyle(
                   fontSize: 17,
-                  color: Color.fromARGB(255, 0, 140,
-                      255), // Usualmente usa-se uma cor diferente para indicar que é clicável
+                  color: Color.fromARGB(255, 0, 0,
+                      0), // Usualmente usa-se uma cor diferente para indicar que é clicável
                   decoration: TextDecoration
                       .underline, // Sublinhado para indicar que é clicável
                 ),
@@ -192,7 +206,7 @@ class SignUpPage extends StatelessWidget {
               child: const Text(
                 "Ao continuar você concorda com nossos termos de politica e privacidade.",
                 style: TextStyle(
-                  fontSize: 15,
+                  fontSize: 16,
                   color: Colors.black,
                 ),
               ),
