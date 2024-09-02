@@ -1,4 +1,7 @@
+import 'package:blockplanner/screens/home.dart';
 import 'package:blockplanner/screens/tela_login.dart';
+import 'package:blockplanner/screens/tela_signup.dart';
+//import 'package:blockplanner/screens/tela_login.dart';
 // import 'package:blockplanner/screens/tela_signup.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +22,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         useMaterial3: true,
       ),
-      home: const LoginPage(),
+      home: const SignUpPage(),
     );
   }
 }

@@ -1,3 +1,5 @@
+import 'package:blockplanner/screens/home.dart';
+import 'package:blockplanner/screens/tela_login.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -15,7 +17,7 @@ class SignUpPage extends StatelessWidget {
             title: const Image(
               image: AssetImage("assets/images/icon.png"),
               width: 240,
-              alignment: Alignment.center,
+              alignment: Alignment.topRight,
             ),
             elevation: 0,
             backgroundColor: const Color.fromARGB(200, 92, 163, 95),
@@ -62,9 +64,37 @@ class SignUpPage extends StatelessWidget {
             ),
             const SizedBox(height: 15),
             const CupertinoTextField(
+                cursorColor: Colors.green,
+                padding: EdgeInsets.all(15),
+                placeholder: "Nome de usuário",
+                placeholderStyle:
+                    TextStyle(color: Colors.black38, fontSize: 15),
+                style: TextStyle(color: Colors.black, fontSize: 15),
+                decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 235, 243, 238),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(15),
+                    ))),
+            const SizedBox(height: 8),
+            const CupertinoTextField(
+                cursorColor: Colors.green,
+                padding: EdgeInsets.all(15),
+                placeholder: "Endereço de e-mail",
+                placeholderStyle:
+                    TextStyle(color: Colors.black38, fontSize: 15),
+                style: TextStyle(color: Colors.black, fontSize: 15),
+                decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 235, 243, 238),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(15),
+                    ))),
+            const SizedBox(
+              height: 8,
+            ),
+            const CupertinoTextField(
               cursorColor: Colors.green,
               padding: EdgeInsets.all(15),
-              placeholder: "Endereço de e-mail",
+              placeholder: "Crie uma senha",
               placeholderStyle: TextStyle(color: Colors.black38, fontSize: 15),
               style: TextStyle(color: Colors.black, fontSize: 15),
               decoration: BoxDecoration(
@@ -112,7 +142,12 @@ class SignUpPage extends StatelessWidget {
                       fontSize: 17,
                       fontWeight: FontWeight.w700),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomePage()),
+                  );
+                },
               ),
             ),
             const SizedBox(height: 10),
@@ -142,7 +177,7 @@ class SignUpPage extends StatelessWidget {
               ),
               child: CupertinoButton(
                 child: const Text(
-                  "Crie sua conta",
+                  "Google",
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 14,
@@ -157,7 +192,10 @@ class SignUpPage extends StatelessWidget {
             InkWell(
               onTap: () {
                 // Ação quando o texto for clicado
-                print("Texto clicado!");
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginPage()),
+                );
               },
               child: const Text(
                 "Já possui uma conta?",
@@ -178,7 +216,7 @@ class SignUpPage extends StatelessWidget {
                 print("Texto clicado!");
               },
               child: const Text(
-                "Ao continuar você concorda com nossos termos de politica e privacidade.",
+                "Ao continuar você concorda com nossos termos de política e privacidade.",
                 style: TextStyle(
                   fontSize: 16,
                   color: Colors.black,

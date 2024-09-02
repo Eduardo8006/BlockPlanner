@@ -1,3 +1,4 @@
+import 'package:blockplanner/screens/tela_signup.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -11,11 +12,6 @@ class LoginPage extends StatelessWidget {
       appBar: PreferredSize(
           preferredSize: const Size.fromHeight(100),
           child: AppBar(
-            title: const Image(
-              image: AssetImage("assets/images/icon.png"),
-              width: 240,
-              alignment: Alignment.center,
-            ),
             elevation: 0,
             backgroundColor: const Color.fromARGB(200, 92, 163, 95),
           )),
@@ -140,7 +136,7 @@ class LoginPage extends StatelessWidget {
               ),
               child: CupertinoButton(
                 child: const Text(
-                  "Crie sua conta",
+                  "Google",
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 14,
@@ -154,8 +150,10 @@ class LoginPage extends StatelessWidget {
             ),
             InkWell(
               onTap: () {
-                // Ação quando o texto for clicado
-                print("Texto clicado!");
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SignUpPage()),
+                );
               },
               child: const Text(
                 "Não possui uma conta?",
